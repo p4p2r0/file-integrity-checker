@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 from pathlib import Path
 import argparse
 import logging
@@ -42,7 +43,7 @@ def parse():
         "-u",
         "--update",
         action="store_true",
-        help="accept current file hash as the new baseline"
+        help="accept current file hash as the new baseline",
     )
 
     parser.add_argument(
@@ -152,9 +153,12 @@ def verify_file(file, hashes, expected_hash=None, update=False):
     if expected_hash:
         match = current_hash.lower() == expected_hash.lower()
         extra = f"\n  expected: {expected_hash}\n  current:  {current_hash}"
-        report("OK" if match else "FAILED", file,
-               logging.INFO if match else logging.WARNING,
-               "" if match else extra)
+        report(
+            "OK" if match else "FAILED",
+            file,
+            logging.INFO if match else logging.WARNING,
+            "" if match else extra,
+        )
         return
 
     key = str(file)
@@ -251,7 +255,7 @@ def main():
             hashes,
             recursive=args.recursive,
             expected_hash=args.hash,
-            update=args.update
+            update=args.update,
         )
 
     if not args.hash:

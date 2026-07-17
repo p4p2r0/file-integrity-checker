@@ -12,7 +12,7 @@ A CLI tool that verifies file integrity using SHA-256 hashes.
 
 ## Why
 
-File integrity monitoring is a core control in security work. Malware often modifies system binaries or configs to persist or hide, and breach investigations frequently start by asking what changed, and when. Tools like Tripwire and OSSEC exist because of this, and hash-based baselining is the standard technique behind them: a changed hash means changed content, full stop, regardless of timestamps or file size which can be spoofed. This project applies that same principle at a small scale, useful for personal systems, dotfiles, scripts, or any file where an unexpected change is worth knowing about immediately.
+Files change for many reasons: malware, misconfiguration, accidental edits, unauthorized access. A changed hash means changed content, unlike timestamps or file size, which can be altered without touching the actual data. This project checks that at a small scale, for personal systems, dotfiles, scripts, or any file where a change needs to be caught immediately.
 
 ## Usage
 ```bash
