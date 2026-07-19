@@ -15,11 +15,11 @@ An integrity checker that detects changes to data in files.
 Files change for many reasons: malware, misconfiguration, accidental edits, unauthorized access. A changed hash means changed content, unlike timestamps or file size, which can be altered without touching the actual data. This project checks that at a small scale, for personal systems, dotfiles, scripts, or any file where a change needs to be caught immediately.
 
 ## Usage
-```bash
+```
 usage: main.py [-h] [-r] [--hash SHA256] [-u] [--view-hashes] [--view-log] [--remove-hash INDEX] [--clear-hashes] [path ...]
 
 positional arguments:
-  path                 File(s) or folder(s) to verify
+  path                 file(s) or folder(s) to verify
 
 options:
   -h, --help           show this help message and exit

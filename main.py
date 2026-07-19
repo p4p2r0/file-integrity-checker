@@ -26,7 +26,7 @@ def parse():
     )
 
     parser.add_argument(
-        "paths", nargs="*", metavar="path", help="File(s) or folder(s) to verify"
+        "paths", nargs="*", metavar="path", help="file(s) or folder(s) to verify"
     )
 
     parser.add_argument(
