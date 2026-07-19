@@ -1,6 +1,6 @@
 # File Integrity Checker
 
-Detects content integrity changes inside files and folders.
+An integrity checker that detects changes to data in files.
 
 ## How
 
