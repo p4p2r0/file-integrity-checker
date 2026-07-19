@@ -1,6 +1,6 @@
 # File Integrity Checker
 
-A CLI tool that verifies file integrity using SHA-256 hashes.
+Detects content integrity changes inside files and folders.
 
 ## How
 
